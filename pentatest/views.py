@@ -6,7 +6,7 @@ import requests
 class FetchIpData(APIView):
 
     def get(self, request, *args, **kwargs):
-        ip = request.META.get("REMOTE_ADDR")
+        ip = self.kwargs['ip']
         error = False
 
         try:
