@@ -21,7 +21,7 @@ from pentatest.views import FetchIpData
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html')),
-    path('ip/<str:ip>/', FetchIpData.as_view(), name='ip'),
+    path('track/<str:action>/', FetchIpData.as_view(), name='track'),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
 ]
